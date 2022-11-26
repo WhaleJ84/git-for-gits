@@ -19,7 +19,7 @@ sudo apt install -y pandoc w3m w3m-img
 pandoc README.md | w3m -T text/html
 
 # Inside Vim
-:! pandoc % | w3m -T text/html
+:! pandoc % | w3m -T text/html -o confirm_qq=false
 ```
 
 You may question why Markdown is relevant to learning Git;
@@ -30,3 +30,4 @@ There will come a time where you return to a project after a long period and hav
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^ide]: Integrated Development Environment
 	: Software for building applications that combines common developer tools into a single graphical user interface.
+
