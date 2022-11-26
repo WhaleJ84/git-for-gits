@@ -2,7 +2,7 @@
 
 A project to teach the usage of Git and related technologies.
 
-![](https://miro.medium.com/max/640/0*Gb3B1-Xk5qHaxU7v.jpg)
+![Success Kid meme saying 'I hated Git. Now I hate it less'](https://miro.medium.com/max/640/0*Gb3B1-Xk5qHaxU7v.jpg)
 
 ## Markdown for Morons
 
