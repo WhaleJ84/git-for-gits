@@ -24,7 +24,7 @@ pandoc README.md | w3m -T text/html
 
 You may question why Markdown is relevant to learning Git;
 It is important to document what your projects are about and how to use them.
-You are not just writing documentation for others, ==you are also writing it for yourself.==
+You are not just writing documentation for others, *you are also writing it for yourself*.
 There will come a time where you return to a project after a long period and have no idea where to resume without it.
 
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
