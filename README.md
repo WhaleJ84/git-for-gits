@@ -96,7 +96,34 @@ However, if you are sure everything in the directory can be added, then you can 
 ## Committing for Cronies
 
 Just adding files to the staging area does nothing to 'save' their progress.
-In Git, each *save* is a called a commit.
+In Git, each *save* is a called a commit and requires a message to explain what the change was.
+It is commonplace for a repository's first commit to be *'Initial commit'*, but subsequent should have meaningful messages.
+
+```
+$ git commit -m 'initial commit'
+[main (root-commit) ba9e827] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/main.py
+$ echo "print('Hello world!')" >> src/main.py
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git add src/main.py
+$ git commit -m 'appended print statement to file'
+[main 7e493bd] appended print statement to file
+ 1 file changed, 1 insertion(+)
+$
+```
+
+Note that every time a change is made to a file, it needs to be re-added to the staging area.
+It is good practice to make one commit per change.
+For example, if you have to modify 20 files to change "It's coming home!" to "It's coming home next time", make the changes, add all the files, then write a meaningful commit like `git commit -m 'adjusted statement to reflect that ludicrous display last night'`.
+There is no need to make 20 separate commits all saying the same thing.
 
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
