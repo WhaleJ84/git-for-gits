@@ -256,6 +256,30 @@ Any changes made in this branch will not affect any other branch.
 This allows for experimentation of different features while always ensuring the *main* branch is working.
 The branch will also remain local only until it is pushed to the remote `git push -u WhaleJ84/proof-reading` (the `-u` part onward is only needed the first push).
 
+## Merging for Mongs
+
+When a task is ready to be combined into the main branch, this is done by *merging*.
+Working on your own, this can all be done locally in the branch you want to merge into:
+
+```
+$ git checkout main
+Switched to branch 'main'
+Your branch is up-to-date with 'gitea/main'.
+$ git merge WhaleJ84/proof-reading
+Updating c882882..66eb28c
+Fast-forward
+ src/main.py | 1 +
+ 1 file changed, 1 insertion(+)
+$ git branch -d WhaleJ84/proof-reading
+Deleted branch WhaleJ84/proof-reading (was 66eb28c).
+$
+```
+
+It merged all the commits made in the `WhaleJ84/proof-reading` branch into main, (in this situation, only 1 commit).
+However, when working with a team **you should not merge into main locally**.
+Instead of merging, *pull requests* are created on the remote server.
+To collaborate, teams can be created and given permission to push to the same repository, but there are simpler ways to do this.
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
