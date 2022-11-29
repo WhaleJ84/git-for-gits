@@ -229,6 +229,33 @@ $
 There is no requirement to push after every commit or at any interval at all.
 Keep in mind that if your repository is public, then what you push can be seen by everyone, so push whwhen you are happy with that work.
 
+## Branching for Baboons
+
+Git utilises *branches* to allow for easier development and cooperation.
+By default, the '*main*' branch is created, but similar to remote names, it is entirely meaningless.
+Conceptually, the main branch is supposed to always house working code that anyone can use without issue.
+While making changes to files, it is best to create a new branch for that specifc task.
+
+```
+$ git branch WhaleJ84/proof-reading
+$ git branch
+* main
+  WhaleJ84/proof-reading
+$ git checkout WhaleJ84/proof-reading
+Switched to branch 'WhaleJ84/proof-reading'
+$ git branch
+  main
+* WhaleJ84/proof-reading
+$
+```
+
+Note that when creating the branch, I prefixed the task with my username `WhaleJ84/proof-reading`.
+This means if myself and another both work on the *proof-reading* task, then the task of merging in changes later will be made easier.
+
+Any changes made in this branch will not affect any other branch.
+This allows for experimentation of different features while always ensuring the *main* branch is working.
+The branch will also remain local only until it is pushed to the remote `git push -u WhaleJ84/proof-reading` (the `-u` part onward is only needed the first push).
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
