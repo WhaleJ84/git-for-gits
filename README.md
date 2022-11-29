@@ -280,6 +280,21 @@ However, when working with a team **you should not merge into main locally**.
 Instead of merging, *pull requests* are created on the remote server.
 To collaborate, teams can be created and given permission to push to the same repository, but there are simpler ways to do this.
 
+## Forking for Fools
+
+The easier way to contribute to a repository is to *fork* it.
+This will create a duplicate of the repository in your own profile (e.g. `ScroogeMcDuck/git-for-gits`).
+The button to do this is in the top right of the repository, between 'Watch' and 'Star',
+
+![Options available in GitHub repository header](media/repo_header.png)
+
+Once forked and cloned to your local machine (`git clone https://github.com/ScroogeMcDuck/git-for-gits.git`), you can then use all the branching, committing, merging, etc. to get your task done.
+It is still recommended to follow the practices outlined like creating branch names with your username in it.
+Reason being all this work is intended to be merged back into the original repository.
+That can be done by using the *Pull requests* tab on the original repo, *New pull request* (green button on the right), and selecting your branch in the drop-down on the right to be merged into the main branch on the left.
+
+![Selecting branches to merge on GitHub](media/repo_pr.png)
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
