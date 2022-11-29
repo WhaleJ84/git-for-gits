@@ -174,6 +174,58 @@ index f5beb6d..11d4372 100644
 Each commit will note who made what changes when.
 While working in teams, this can be important for accounting purposes.
 
+## Pushing for Pillocks
+
+Until now, everything has been done on your local machines.
+If you were to lose your machine, the work would be lost.
+Git allows *pushing* to a *remote* repository using `git push`:
+
+```
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+$
+```
+
+The error points out there is no remote configured; so what is a remote?
+You may have heard of [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [Gitea](https://gitea.com), and others.
+Each require an account to begin creating repositories (GitHub is the most popular so it's best to go with that).
+The repository will provide you with the commands required to begin pushing to it, but lets break it down:
+
+- `git remote add *<name>* <url>`
+By default, the name provided to you will be **origin** which is standard, but the name *origin* is meaningless.
+You could change the name to reflect your actual remote (e.g. *github*), or anything like 'whaaaah' to inform developers the correct way to cry when they break things - it does not matter.
+
+- `git remote add <name> *<url>*`
+The URL will typically follow the following format: '<method><service>:<username>/<repository>.git'.
+For example, my repo on GitHub would be 'git@github.com:WhaleJ84/git-for-gits.git'.
+The caveat would be whether you use SSH or HTTPS as the connection method;
+SSH is 'git@' and HTTPS is 'https://'.
+Regardless, the repository will provide you the correct commands and you can then push your work:
+
+```
+$ git push -u gitea main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (8/8), 833 bytes | 833.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To git.james-whale.com:james/test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'gitea/main'.
+$
+```
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
