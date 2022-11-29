@@ -61,6 +61,42 @@ $ git add ../my_other_project/src/main.py
 fatal: ../my_other_project/src/main.py: '../my_other_project/src/main.py' is outside repository at '/tmp/test/my_project'
 ```
 
+Only files that are *added* will be tracked.
+Tracked items are added to what is called the **staging area**, which can be seen by running `git status`:
+
+```
+$ git init
+Reinitialised existing Git repository in /tmp/my_project/.git/
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/                                                                   # <---- Untracked
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add src
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   src/main.py                                                # <---- Tracked
+
+$
+```
+
+Manually adding files allows granularity in tracking.
+However, if you are sure everything in the directory can be added, then you can run `git add *`.
+
+## Committing for Cronies
+
+Just adding files to the staging area does nothing to 'save' their progress.
+In Git, each *save* is a called a commit.
 
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
