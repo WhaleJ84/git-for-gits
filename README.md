@@ -226,6 +226,9 @@ branch 'main' set up to track 'gitea/main'.
 $
 ```
 
+There is no requirement to push after every commit or at any interval at all.
+Keep in mind that if your repository is public, then what you push can be seen by everyone, so push whwhen you are happy with that work.
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
