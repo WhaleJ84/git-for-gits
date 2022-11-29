@@ -125,10 +125,55 @@ It is good practice to make one commit per change.
 For example, if you have to modify 20 files to change "It's coming home!" to "It's coming home next time", make the changes, add all the files, then write a meaningful commit like `git commit -m 'adjusted statement to reflect that ludicrous display last night'`.
 There is no need to make 20 separate commits all saying the same thing.
 
+## Logging for Lobotomites
+
+A good reason why you write meaningful commit messages is to provide a clear timeline what has happened.
+Returning to a project after a long while can leave you wondering where you left off.
+The command `git log` will show the history of all commits:
+
+```
+$ git log
+commit cc754c71428cae9708c338a7ec2692e936c2df3e (HEAD -> main, origin/main)
+Author: James Whale <james@james-whale.com>
+Date:   Tue Nov 29 18:52:43 2022 +0000
+
+    added committing example to readme
+
+commit 8540bdabbfa08a76de4315a03f011dc4122639ac
+Author: James Whale <james@james-whale.com>
+Date:   Tue Nov 29 18:33:15 2022 +0000
+
+    updated README
+
+:
+```
+
+You can see that the commit message *'updated README'* is rather ambiguous and does not describe *how* it was updated.
+In situations such as that, if you wish to view the change, you have to use the commit hash[^hash].
+Using at least 7 characters of any hash should be unique enough to refer to that change:
+
+```
+$ git diff 8540bda
+diff --git a/README.md b/README.md
+index f5beb6d..11d4372 100644
+--- a/README.md
++++ b/README.md
+@@ -96,7 +96,60 @@ However, if you are sure everything in the directory can be added, then you can
+ ## Committing for Cronies
+
+ Just adding files to the staging area does nothing to 'save' their progress.
+-In Git, each *save* is a called a commit.
++In Git, each *save* is a called a commit and requires a message to explain what the change was.
++It is commonplace for a repository's first commit to be *'Initial commit'*, but subsequent should have meaningful messages.
+:
+```
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
 	: Software for building applications that combines common developer tools into a single graphical user interface.
 [^vcs]: Version Control System
 	: A system that records changes to a file or set of files over time so that you can recall specific versions later.
+[^hash]: Hash
+	: A fixed-length, unpredictable, and irreversible representation of a given input,
 
