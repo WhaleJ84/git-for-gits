@@ -295,6 +295,14 @@ That can be done by using the *Pull requests* tab on the original repo, *New pul
 
 ![Selecting branches to merge on GitHub](media/repo_pr.png)
 
+## Pulling for Plonkers
+
+When someone else has merged code into a branch on the remote server, your code is now out-of-sync with the latest code.
+You can *fetch* or *pull* down changes at any time; `git fetch` will check for changes across all branches, whereas `git pull` will pull down the changes for the branch you're in.
+
+You should pull down the latest changes *before* working on a branch.
+Working on a branch that is not up-to-date will result in conflicts emerging at a later date.
+
 [^1]: [This guide](https://www.markdownguide.org/basic-syntax) provides a handy link to learning the syntax.
 [^2]: I don't use Windows. Do not sue me if this is not all 100% correct.
 [^ide]: Integrated Development Environment
