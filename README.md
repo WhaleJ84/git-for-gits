@@ -4,7 +4,7 @@ A project to teach the usage of Git and related technologies.
 
 ![Success Kid meme saying 'I hated Git. Now I hate it less'](https://miro.medium.com/max/640/0*Gb3B1-Xk5qHaxU7v.jpg)
 
-## Markdown for Morons
+## Markdown for Will Sephton
 
 This document is written in Markdown[^1] and named `README.md`.
 Following this format will have it rendered in the repository's directory.
@@ -229,7 +229,7 @@ $
 There is no requirement to push after every commit or at any interval at all.
 Keep in mind that if your repository is public, then what you push can be seen by everyone, so push whwhen you are happy with that work.
 
-## Branching for Baboons
+## Branching for Will is cool
 
 Git utilises *branches* to allow for easier development and cooperation.
 By default, the '*main*' branch is created, but similar to remote names, it is entirely meaningless.
