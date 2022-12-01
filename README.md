@@ -4,7 +4,7 @@ A project to teach the usage of Git and related technologies.
 
 ![Success Kid meme saying 'I hated Git. Now I hate it less'](https://miro.medium.com/max/640/0*Gb3B1-Xk5qHaxU7v.jpg)
 
-## Markdown for Morons
+## Markdown for Will Sephton
 
 This document is written in Markdown[^1] and named `README.md`.
 Following this format will have it rendered in the repository's directory.
@@ -228,6 +228,33 @@ $
 
 There is no requirement to push after every commit or at any interval at all.
 Keep in mind that if your repository is public, then what you push can be seen by everyone, so push whwhen you are happy with that work.
+
+## Branching for Will is cool
+
+Git utilises *branches* to allow for easier development and cooperation.
+By default, the '*main*' branch is created, but similar to remote names, it is entirely meaningless.
+Conceptually, the main branch is supposed to always house working code that anyone can use without issue.
+While making changes to files, it is best to create a new branch for that specifc task.
+
+```
+$ git branch WhaleJ84/proof-reading
+$ git branch
+* main
+  WhaleJ84/proof-reading
+$ git checkout WhaleJ84/proof-reading
+Switched to branch 'WhaleJ84/proof-reading'
+$ git branch
+  main
+* WhaleJ84/proof-reading
+$
+```
+
+Note that when creating the branch, I prefixed the task with my username `WhaleJ84/proof-reading`.
+This means if myself and another both work on the *proof-reading* task, then the task of merging in changes later will be made easier.
+
+Any changes made in this branch will not affect any other branch.
+This allows for experimentation of different features while always ensuring the *main* branch is working.
+The branch will also remain local only until it is pushed to the remote `git push -u WhaleJ84/proof-reading` (the `-u` part onward is only needed the first push).
 
 ## Merging for Mongs
 
